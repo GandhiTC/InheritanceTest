@@ -1,0 +1,36 @@
+Notes and examples derived from:
+	https://www.tutorialspoint.com/java/java_access_modifiers.htm
+	https://www.tutorialspoint.com/java/java_modifier_types.htm
+
+
+
+Basics
+	- A subclass extends or inherits from a base/parent/super class
+		- Subclass "is a kind of" superclass
+			- Giraffe is a type of animal
+	- An object instance is instantiated
+		- Object instance is an object of the instantiated class' type
+			- Object instance is a giraffe
+
+
+
+The four access levels are:
+	- Private   - Visible to the class only.
+	- Default   - Visible to the package, the default. No modifiers are needed.
+	- Protected - Visible to the package and all subclasses.
+	- Public    - Visible to the world.
+	
+
+
+Default VS Protected:
+	- Default constricts access to package ONLY
+	- Protected allows accessing protected items to subclasses from other packages
+	- Protected does not allow accessing protected items to classes from other packages that instantiate the class with protected items
+
+
+
+The following rules for inherited methods are enforced:
+	- Methods declared public in a superclass also must be public in all subclasses.
+	- Methods declared protected in a superclass must either be protected or public in subclasses; they cannot be private.
+	- Methods with no access modifier declared (default modifier) in the superclass cannot be accessed at all from a different package.
+	- Methods declared private are not inherited at all.
